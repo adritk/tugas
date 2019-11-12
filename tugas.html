@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+        <b>1. Kapan Hari Kemerdekaan Indonesia?</b><br><br>
+        <input type="radio" value="17 Agustus 1945" name="nomor1"/>17 Agustus 1945
+        <input type="radio" value="20 Mei 1947" name="nomor1" />20 Mei 1947
+        <input type="radio" value="12 September 1944" name="nomor1" />12 September 1944
+        <input type="radio" value="20 Januari 1955" name="nomor1" />20 Januari 1955 <br><br>
+
+        <b>2. 1 Tahun Ada Berapa Bulan?</b><br><br>
+        <input type="radio" value="11" name="nomor2" />11 Bulan
+        <input type="radio" value="13" name="nomor2" />13 Bulan
+        <input type="radio" value="12" name="nomor2" />12 Bulan
+        <input type="radio" value="14" name="nomor2" />14 Bulan <br><br>
+
+        <b>3. Apa Nama Ibukota Indonesia?</b><br><br>
+        <input type="radio" value="jakarta" name="nomor3" />Jakarta
+        <input type="radio" value="denpasar" name="nomor3" />Denpasar
+        <input type="radio" value="surabaya" name="nomor3" />Surabaya
+        <input type="radio" value="semarang" name="nomor3" />Semarang
+        <br><br>
+
+        <b>4. Siapa Nama Presiden Pertama Indonesia?</b><br><br>
+        <input type="radio" value="jokowi" name="nomor4" />Jokowi
+        <input type="radio" value="soekarno" name="nomor4" />Soekarno
+        <input type="radio" value="megawati" name="nomor4" />Megawati
+        <input type="radio" value="prabowo" name="nomor4" />Prabowo <br><br>
+
+        <b>5. Apa Nama Makanan Khas Yogyakarta?</b><br><br>
+        <input type="radio" value="sate" name="nomor5" />Sate
+        <input type="radio" value="soto" name="nomor5" />Soto
+        <input type="radio" value="batagor" name="nomor5" />Batagor
+        <input type="radio" value="gudeg" name="nomor5" />Gudeg
+        <br><br>
+
+        <input type="button" value="submit" onclick="jawaban()">
+
+       
+
+        <script>
+            function jawaban(){
+                var nilai = 0
+                var nomor1 = document.getElementsByName('nomor1')
+                var nomor2 = document.getElementsByName('nomor2')
+                var nomor3 = document.getElementsByName('nomor3')
+                var nomor4 = document.getElementsByName('nomor4')
+                var nomor5 = document.getElementsByName('nomor5')
+                
+                for(var i = 0; i<nomor1.length; i++){
+                    if (nomor1[i].checked) {
+                        nomor1 = nomor1[i].value
+                    }
+                }
+
+                for(var i = 0; i<nomor2.length; i++){
+                    if (nomor2[i].checked) {
+                        nomor2 = nomor2[i].value
+                    }
+                }
+
+                for(var i = 0; i<nomor3.length; i++){
+                    if (nomor3[i].checked) {
+                        nomor3 = nomor3[i].value
+                    }
+                }
+
+                for(var i = 0; i<nomor4.length; i++){
+                    if (nomor4[i].checked) {
+                        nomor4 = nomor4[i].value
+                    }
+                }
+
+                for(var i = 0; i<nomor5.length; i++){
+                    if (nomor5[i].checked) {
+                        nomor5 = nomor5[i].value
+                    }
+                }
+
+                if(nomor1 === "17 Agustus 1945"){
+                    nilai += 20
+                }
+
+                if(nomor2 === "12"){
+                    nilai += 20
+                }
+
+                if(nomor3 === "jakarta"){
+                    nilai += 20
+                }
+
+                if(nomor4 === "soekarno"){
+                    nilai += 20
+                }
+
+                if(nomor5 === "gudeg"){
+                    nilai += 20
+                }
+                if(nilai < 60){
+                    alert('Nilai Anda '+nilai + '\n'+'Silahkan Remedial')
+                } else if (nilai === 100){
+                    alert('Selamat Nilai Anda '+ nilai)
+                }
+                else {
+                     alert('Nilai Anda ' + nilai)
+                }
+            }
+        </script>
+</body>
+</html>
